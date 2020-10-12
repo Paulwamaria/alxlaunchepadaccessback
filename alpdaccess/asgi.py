@@ -1,5 +1,4 @@
-"""
-ASGI config for alpdaccess project.
+"""ASGI config for alpdaccess project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
