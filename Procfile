@@ -1,0 +1,1 @@
+web: gunicorn alpdaccess.wsgi --log-file -
