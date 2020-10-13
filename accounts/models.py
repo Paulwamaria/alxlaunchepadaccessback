@@ -3,8 +3,8 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 
 class UserAccountManager(BaseUserManager):
-    
     """Returns a new user after legit registration credentials are provided.
+
 
     Args:
         BaseUserManager (class): An inbuild class in django for managing user accounts.
@@ -32,6 +32,7 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     
     """Validates registration data and instantiates the UserAccountManager
 
+
     Args:
         AbstractBaseUser (Inbuilt class): The inbuild classs for customizable models.
         PermissionsMixin ([type]): [description]
@@ -53,7 +54,6 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         
         """Returns the object representation.
-
         Returns:
             email: Returns the email address of the requested user object.
         """
