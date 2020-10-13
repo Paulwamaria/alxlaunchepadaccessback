@@ -5,7 +5,9 @@ User = get_user_model()
 
 class UserSerializer(UserCreateSerializer):
     class Meta(UserCreateSerializer.Meta):
-        """Serializes and deserializes data matching the specied model and fields.
+        """
+        
+        Serializes and deserializes data matching the specied model and fields.
 
 
         Args:

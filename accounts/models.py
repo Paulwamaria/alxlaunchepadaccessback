@@ -3,7 +3,9 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 
 class UserAccountManager(BaseUserManager):
-    """Returns a new user after legit registration credentials are provided.
+    """
+    
+    Returns a new user after legit registration credentials are provided.
 
 
     Args:
@@ -29,8 +31,9 @@ class UserAccountManager(BaseUserManager):
 
 
 class UserAccount(AbstractBaseUser, PermissionsMixin):
+    """
     
-    """Validates registration data and instantiates the UserAccountManager
+    Validates registration data and instantiates the UserAccountManager
 
 
     Args:
@@ -53,7 +56,9 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         
-        """Returns the object representation.
+        """
+        
+        Returns the object representation.
         Returns:
             email: Returns the email address of the requested user object.
         """
