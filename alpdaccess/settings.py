@@ -167,6 +167,8 @@ REST_FRAMEWORK = {
 
 }
 
+CORS_ORIGIN_WHITELIST =('http://localhost:3000', 'https://alxaccessor-api.herokuapp.com/',)
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
