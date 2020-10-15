@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from djoser import email
 
 # Create your views here.
 def index(request):
@@ -10,3 +11,10 @@ def index(request):
         "greet":greet,
     }
     return render(request,'accounts/index.html',context)
+
+class ActivationEmail(email.ActivationEmail):
+    template_name = 'email/activation.html'
+
+
+class AccountReset(email.PasswordResetEmail):
+    template_name = 'email/resetPassword.html'
