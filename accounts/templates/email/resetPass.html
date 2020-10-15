@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block subject %}
+    {% block trans %}Password Reset Confirmation on Alx-accessor {% endblock trans %}
+    {% endblock subject %}
+
+    {% block text_body %}
+    You're receiving this email because you've requested for a password reset on
+        "Alx-accessor" 
+
+    Please go to the follow the link to reset your account:
+    https://alx-accessor.netlify.app/password/reset/confirm/{{uid}}/{{token}}
+
+   If this wasn't you, please let us know.
+
+    {% endblock text_body %}
+</body>
+
+</html>

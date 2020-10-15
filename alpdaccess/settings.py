@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 from decouple import config
 import django_heroku
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -143,16 +144,25 @@ DJOSER = {
     'SEND_CONFIRMATION_EMAIL': True,
     'SET_USERNAME_RETYPE': True,
     'SET_PASSWORD_RETYPE': True,
-    'PASSWORD_RESET_CONFIRM_URL': 'password/rest/confirm/{uid}/{token}',
-    'USERNAME_RESET_CONFIRM_URL': 'email/rest/confirm/{uid}/{token}',
-    'ACTIVATION_URL': 'activate/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL': 'https://alx-accessor.netlify.app//password/reset/confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL': 'https://alx-accessor.netlify.app//email/reset/confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'https://alx-accessor.netlify.app/activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {
         'user_create': 'accounts.serializers.UserCreateSerializer',
         'user': 'accounts.serializers.UserSerializer',
         'user_delete': 'djoser.serializers.UserDeleteSerializer',
+    },'EMAIL': {
+        'activation': 'accounts.views.ActivationEmail',
+        'password_reset':'accounts.views.AccountReset',
     }
 
+}
+
+# SIMPLE JWT
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
 # Restframework
@@ -167,7 +177,8 @@ REST_FRAMEWORK = {
 
 }
 
-CORS_ORIGIN_WHITELIST =('http://localhost:3000', 'https://alxaccessor-api.herokuapp.com/',)
+CORS_ORIGIN_WHITELIST = ('http://localhost:3000',
+                         'https://alx-accessor.netlify.app',)
 
 
 # Static files (CSS, JavaScript, Images)
