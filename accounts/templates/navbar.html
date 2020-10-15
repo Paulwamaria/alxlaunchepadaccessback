@@ -1,0 +1,33 @@
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg n#1c2a48 mdb-color darken-3 sticky-top text-white">
+    <a class="navbar-brand funnyfonts" href="{% url 'home' %}">Alx-accessor-api</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link funnyfonts" href="{% url 'home' %}">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-default drop"
+                    aria-labelledby="navbarDropdownMenuLink-333">
+                    <a href='/admin' class="dropdown-item text-info">Admin</a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
