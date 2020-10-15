@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block subject %}
+    {% block trans %}Account activation on Alx-accessor {% endblock trans %}
+    {% endblock subject %}
+
+    {% block text_body %}
+    You're receiving this email because you need to finish activation process on
+        "Alx-accessor" 
+
+    Please go to the following page to activate your account:
+    https://alx-accessor.netlify.app/activate/{{uid}}/{{token}}
+
+   Thanks for joining us.
+
+    {% endblock text_body %}
+</body>
+
+</html>
