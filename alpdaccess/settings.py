@@ -177,8 +177,7 @@ REST_FRAMEWORK = {
 
 }
 
-CORS_ORIGIN_WHITELIST = ('http://localhost:3000',
-                         'https://alx-accessor.netlify.app',)
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Static files (CSS, JavaScript, Images)
