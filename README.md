@@ -93,6 +93,6 @@ $ python manage.py runserver
 
 [Paul Wamaria](https://paulwamaria.netlify.app)
 
-### Acknoledgement
+### Acknowledgement
 
 This application was an asignment by [alx](https://www.alx.app/)
