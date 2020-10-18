@@ -152,10 +152,13 @@ DJOSER = {
         'user_create': 'accounts.serializers.UserCreateSerializer',
         'user': 'accounts.serializers.UserSerializer',
         'user_delete': 'djoser.serializers.UserDeleteSerializer',
-    },'EMAIL': {
+        'activation': 'djoser.serializers.ActivationSerializer',
+        'password_reset': 'djoser.serializers.SendEmailResetSerializer',
+        'password_reset_confirm': 'djoser.serializers.PasswordResetConfirmSerializer',
+    }, 'EMAIL': {
         'activation': 'accounts.views.ActivationEmail',
-        'password_reset':'accounts.views.AccountReset',
-        'confirmation':'accounts.views.ConfirmActivation',
+        'password_reset': 'accounts.views.AccountReset',
+        'confirmation': 'accounts.views.ConfirmActivation',
     }
 
 }
