@@ -155,6 +155,7 @@ DJOSER = {
     },'EMAIL': {
         'activation': 'accounts.views.ActivationEmail',
         'password_reset':'accounts.views.AccountReset',
+        'confirmation':'accounts.views.ConfirmActivation',
     }
 
 }
