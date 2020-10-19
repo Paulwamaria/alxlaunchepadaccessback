@@ -1,7 +1,221 @@
 {% extends 'accounts/base.html' %}
 
 {% block content %}
-<div class="container-fluid app">
-    <h1 class="text-center mt-5">This website is under construction!</h1>
+<div class="container-fluid app overflow-auto">
+    <h3 class="text-center"> Welcome to Alx-accessor API</h3>
+    <p class="text-center">The following are the available authentication
+        endpoints.</p>
+    <p class="text-center">BASE_URL: <em>https://alxaccessor-api.herokuapp.com</em></p>
+    <p class="text-center">Headers:
+        <br>
+    <figure class="text-center">
+        <figcaption></figcaption>
+        <pre>
+                <code>
+                    {
+                        "Content-Type":"application/json",
+                        "Authorization":"Bearer &ltYour access Key&gt"
+                    }
+                </code>
+            </pre>
+    </figure>
+    </p>
+
+   <div class="table-responsive">
+    <table class="mt-2 table table-striped table-bordered table-hover table-condensed text-left text-success table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">METHOD</th>
+
+                <th scope="col">ENDPOINT</th>
+                <th scope="col">BODY</th>
+                <th scope="col">RESPONSE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">POST
+                    <br>
+                    Sign up
+                </th>
+
+                <td><em>/auth/users/</em></td>
+                <td class="overflow-auto">
+
+
+                    <figure>
+
+                        <pre>
+                          <code>
+                            {
+                                "email":john.doe@gmail.com",
+                                "firstName":"John",
+                                "lastName":"Doe",
+                                "password":"123456",
+                                "re_password":"123456"
+                            }
+                          </code>
+                        </pre>
+                    </figure>
+                </td>
+
+                <td>
+                    <figure>
+                        <figcaption>An email is sent with further activation details.</figcaption>
+                        <pre>
+                              <code>
+                                {
+                                    "email":john.doe@gmail.com",
+                                    "firstName":"John",
+                                    "lastName":"Doe",
+                                    "password":"123456"
+                                }
+                              </code>
+                            </pre>
+                    </figure>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">POST
+                    <br>
+                    Activation
+                </th>
+
+                <td><em>/auth/users/activation/</em></td>
+                <td>
+                    <figure class="text-left">
+                        <figcaption>uid and token received by email</figcaption>
+                        <pre>
+                                  <code>
+                                    {
+                                        "uid":"MQ",
+                                        "token":"bxke9-bdd5585c27cd"
+                                    }
+                                  </code>
+                                </pre>
+                    </figure>
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">POST
+                    <br>
+                    Request access key
+                </th>
+
+                <td><em>auth/jwt/create/</em></td>
+                <td>
+                    <figure>
+                        <figcaption>
+
+                        </figcaption>
+                        <pre>
+                                        <code>
+                                            {
+                                                "email":"john.doe@gmail.com",
+                                                "password":"123456"
+                                            }
+                                        </code>
+                                    </pre>
+                    </figure>
+                </td>
+
+                <td class="overflow-auto">
+                    <figure>
+                        <figcaption>
+
+                        </figcaption>
+                        <pre>
+                                        <code>
+                                            {
+                                                "access":"your access key",
+                                                "refresh":"your refresh key"
+                                            }
+                                        </code>
+                                    </pre>
+                    </figure>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">POST
+                    <br>
+                    Request password reset
+                </th>
+
+                <td><em>auth/users/reset_password/</em></td>
+                <td>
+                    <figure>
+                        <figcaption>
+
+                        </figcaption>
+                        <pre>
+                                        <code>
+                                            {
+                                                "email":"your registerd email address",
+                                              
+                                            }
+                                        </code>
+                                    </pre>
+                    </figure>
+                </td>
+
+                <td class="overflow-auto">
+                    <figure>
+                        <figcaption>
+
+                        </figcaption>
+                        <pre>
+                                        <code>
+                                            you will receive a confirmation email with further details.
+                                        </code>
+                                    </pre>
+                    </figure>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">POST
+                    <br>
+                    Confirm Password Reset
+                </th>
+
+                <td><em>auth/users/reset_password_reset/</em></td>
+                <td>
+                    <figure>
+                        <figcaption>
+                            uid and token received via email
+                        </figcaption>
+                        <pre>
+                                        <code>
+                                            {
+                                                "uid":"",
+                                                "token":"",
+                                                "new_password":"your new password",
+                                                "re_new_password":"your new password"
+
+                                            }
+                                        </code>
+                                    </pre>
+                    </figure>
+                </td>
+
+                <td class="overflow-auto">
+                    <figure>
+                        <figcaption>
+
+                        </figcaption>
+                        <pre>
+                                        <code>
+                                       You will receive a confirmation email for successiful password reset.
+                                        </code>
+                                    </pre>
+                    </figure>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+   </div>
+
+
 </div>
 {% endblock %}
