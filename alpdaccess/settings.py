@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_restframework',
     'djoser',
     'corsheaders',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

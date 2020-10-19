@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% block subject %}
+{% block trans %}Account verification on Alx-accessor {% endblock trans %}
+{% endblock subject %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block text_body %}
+Your account was successfully verified. Welcome to Alx-accessor
 
-<body>
-    {% block subject %}
-    {% block trans %}Account verification on Alx-accessor {% endblock trans %}
-    {% endblock subject %}
+Follow the link to login
+https://alx-accessor.netlify.app/login
 
-    {% block text_body %}
-   Your account was successfully verified. Welcome to Alx-accessor
+Thanks for joining us.
 
-    Follow the link to login
-    https://alx-accessor.netlify.app/login
-
-   Thanks for joining us.
-
-    {% endblock text_body %}
-</body>
-
-</html>
+{% endblock text_body %}
