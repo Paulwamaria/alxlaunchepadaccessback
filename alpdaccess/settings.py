@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'djoser',
     'corsheaders',
     'bootstrap4',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -145,8 +146,8 @@ DJOSER = {
     'SEND_CONFIRMATION_EMAIL': True,
     'SET_USERNAME_RETYPE': True,
     'SET_PASSWORD_RETYPE': True,
-    'PASSWORD_RESET_CONFIRM_URL': 'https://alx-accessor.netlify.app//password/reset/confirm/{uid}/{token}',
-    'USERNAME_RESET_CONFIRM_URL': 'https://alx-accessor.netlify.app//email/reset/confirm/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL': 'https://alx-accessor.netlify.app/password/reset/confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL': 'https://alx-accessor.netlify.app/email/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': 'https://alx-accessor.netlify.app/activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {
